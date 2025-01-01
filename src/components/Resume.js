@@ -13,7 +13,7 @@ const Resume = () => {
           <div className="statistics">
             <div className="stat">
               <h4>3+</h4>
-              <p>3+ Years of professional and academic experience</p>
+              <p>Years of professional and academic experience</p>
             </div>
             <div className="stat">
               <h4>6+</h4>
