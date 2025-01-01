@@ -11,13 +11,24 @@ function Chatbot() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Make a POST request to the Flask backend with the user's query
-      const res = await axios.post("http://localhost:5001/chat", {
-        query: userInput,
-      });
-      setChatbotResponse(res.data.response);
+      const res = await axios.post(
+        "https://api-inference.huggingface.co/models/microsoft/DialoGPT-medium", 
+        {
+          inputs: userInput,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          }
+        }
+      );
+
+      // Extract and set the response
+      const response = res.data[0].generated_text.trim();
+      setChatbotResponse(response);
     } catch (error) {
       console.error("Error getting chatbot response:", error);
+      setChatbotResponse("Sorry, I couldn't understand that.");
     }
   };
 
@@ -35,7 +46,7 @@ function Chatbot() {
       {/* Chat Popup */}
       {isChatOpen && (
         <div className="chat-popup">
-          <h3 className="chat-title">Ask me about my resume</h3>
+          <h3 className="chat-title">Ask about me</h3>
           <form onSubmit={handleSubmit} className="chat-form">
             <input
               type="text"
