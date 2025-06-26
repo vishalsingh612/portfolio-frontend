@@ -7,12 +7,12 @@ const Navbar = () => {
   const handleClick = (sectionId) => {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: 'smooth' });
-    setIsOpen(false); // Close the menu after clicking (for mobile)
+    setIsOpen(false); 
   };
 
   return (
     <nav className="navbar">
-      <img src={logo} alt="Logo" className="logo" />
+      <img onClick={() => handleClick('introduction')} src={logo} alt="Logo" className="logo" />
       <div
         className={`navbar-toggle ${isOpen ? 'active' : ''}`}
         onClick={() => setIsOpen(!isOpen)}
@@ -22,10 +22,12 @@ const Navbar = () => {
         <span></span>
       </div>
       <ul className={`navbar-links ${isOpen ? 'open' : ''}`}>
-        <li onClick={() => handleClick('introduction')}>Know Me</li>
+        <li onClick={() => handleClick('resume')}>Know Me</li>
+        <li onClick={() => handleClick('education')}>Education</li>
+        <li onClick={() => handleClick('experience')}>Experience</li>
         <li onClick={() => handleClick('skills')}>Skills</li>
-        <li onClick={() => handleClick('resume')}>Resume</li>
-        <li onClick={() => handleClick('contact')}>Contact</li>
+        <li onClick={() => handleClick('projects')}>Projects</li>
+        <li onClick={() => handleClick('contact')}>Contact Me</li>
       </ul>
     </nav>
   );

@@ -1,10 +1,11 @@
 /* Resume Section */
 .resume {
     padding-top: 60px ;
-    padding-bottom: 160px !important;
+    padding-bottom: 100px !important;
     padding-inline: 150px !important;
-   
-    background-color: #f9f9f9;
+   border-top-left-radius: 120px;
+   border-top-right-radius: 120px;
+    /* background-color: #f9f9f9; */
   }
   
   .resume-content {
@@ -16,21 +17,22 @@
   
   .left-content {
     flex: 1;
-    max-width: 600px;
+    max-width: 500px;
     text-align: left; 
   }
   
   .left-content h2 {
     font-size: 2.5rem;
-    color: #34495e;
+    color: #191919;
     margin-bottom: 15px;
+    margin-top: 50px;
     text-align: left; 
     
   }
   
-  .left-content h3 {
-    font-size: 1.75rem;
-    color: #7f8c8d;
+  .left-content p {
+    font-size: 1rem;
+    color: #191919;
     margin-bottom: 20px;
     text-align: left; 
   }
@@ -49,32 +51,34 @@
   .stat h4 {
     font-size: 2rem;
     font-weight: bold;
-    color: #aa5df7;
+    color: #9500ff;
   }
   
   .stat p {
-    font-size: 1rem;
-    color: #7f8c8d;
+    font-size: 0.8rem;
+    color: #191919;
+    text-align: center;
   }
   
   a.btn {
     display: inline-block;
-    background-color: #34495e;
+    background-color: #191919;
     color: white;
-    padding: 10px 20px;
+    padding: 16px 28px;
     font-size: 1rem;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 26px;
     transition: background-color 0.3s ease;
   }
   
   a.btn:hover {
-    background-color: #34495e;
+    background-color: #333333;
+    cursor: pointer;
   }
   
   .right-content {
     flex: 1;
-    max-width: 300px;
+    max-width: 400px;
     display: flex;
     justify-content: flex-end;
   }
@@ -82,7 +86,7 @@
   .profile-img2 {
     border-radius: 0px;
     width: 100%;
-    max-width: 250px;
+    max-width: 350px;
     object-fit: cover;
   }
   
@@ -92,6 +96,8 @@
         padding-top: 40px ;
         padding-bottom: 60px !important;
         padding-inline: 40px !important;
+        border-top-left-radius: 40px;
+   border-top-right-radius: 40px;
     }
     .resume-content {
       flex-direction: column;

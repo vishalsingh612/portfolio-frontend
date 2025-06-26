@@ -5,7 +5,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    padding-inline: 100px;
+    padding-inline: 60px;
     padding-block: 200px;
     background-color: #f4f4f9;
   }
@@ -21,13 +21,20 @@
   .introduction-text h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: #191919;
   }
-  
-  .introduction-text p {
+  .introduction-text h5 {
     font-size: 1.2rem;
-    color: #555;
-    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #9500ff;
+    font-weight: lighter;
+    font-style: italic;
+  }
+  .introduction-text p {
+    font-size: 1rem;
+    color: #2d2d2d;
+    line-height: 1.4;
+    font-weight: 550;
   }
   
   .animated-text {
@@ -56,11 +63,26 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1.5s ease-in-out;
   }
+  a.hero-btn {
+    display: inline-block;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 16px 28px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
   
+  a.hero-btn:hover {
+    background-color: #4e4e4e;
+    cursor: pointer;
+  }
   /* Mobile View */
   @media (max-width: 768px) {
     .introduction {
-      flex-direction: column;
+      flex-direction: column-reverse;
       text-align: center;
       padding-inline: 30px;
       padding-block: 80px;

@@ -9,7 +9,7 @@ const Resume = () => {
       <div className="resume-content">
         <div className="left-content">
           <h2>More About Me</h2>
-          <p>📚 I am deeply passionate about exploring and applying the latest advancements in Data Science and AI to real-world challenges.</p>
+          <p>I am deeply passionate about exploring and applying the latest advancements in Data Science and AI to real-world challenges.</p>
           <div className="statistics">
             <div className="stat">
               <h4>3+</h4>
